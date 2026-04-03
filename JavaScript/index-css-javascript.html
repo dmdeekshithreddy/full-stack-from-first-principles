@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic-Data-Engineering-Platform</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f9f9f9;
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        font-size: 1.2em;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Agentic-Data-Engineering-Platform</h1>
+    <p>
+      Welcome to the Agentic Data Engineering Platform! This platform is
+      designed to facilitate data engineering tasks using agentic principles.
+      Explore the features and capabilities of the platform to enhance your data
+      engineering workflows.
+    </p>
+    <!-- id attributes let JavaScript find these elements -->
+    <button id="likeBtn">👍 Like</button>
+    <button id="likeCount">0 likes</button>
+
+    <script>
+      // 1. Find the elements in the DOM
+      const likeBtn = document.getElementById("likeBtn");
+      const likeCount = document.getElementById("likeCount");
+
+      // 2. State lives in JavaScript memmory while page is open
+      let likes = 0;
+      //   let liked = false;
+
+      // 3. Listen for click events on the like button
+      likeBtn.addEventListener("click", () => {
+        // if (!liked) {
+        likes++;
+        //   liked = true;
+        // }
+        likeCount.textContent = `${likes} likes`;
+        // liked = false;
+      });
+    </script>
+  </body>
+</html>
